@@ -1,0 +1,15 @@
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\bin\Debug\net9.0\ReadySolution.exe
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\bin\Debug\net9.0\ReadySolution.deps.json
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\bin\Debug\net9.0\ReadySolution.runtimeconfig.json
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\bin\Debug\net9.0\ReadySolution.dll
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\bin\Debug\net9.0\ReadySolution.pdb
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.AssemblyInfoInputs.cache
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.AssemblyInfo.cs
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.csproj.CoreCompileInputs.cache
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.sourcelink.json
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.dll
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\refint\ReadySolution.dll
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.pdb
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ReadySolution.genruntimeconfig.cache
+C:\Users\FostersPC\Desktop\Backand КОД\github\Code10\Lesson1\ReadySolution\obj\Debug\net9.0\ref\ReadySolution.dll
