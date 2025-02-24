@@ -34,6 +34,29 @@ class Program
         int total1 = number + 5;
         Console.WriteLine($"Total: {total1}");
 
+        //Практика Б
+        //Попросите пользователя ввести свое имя, а затем выведите приветствие с использованием переменной для имени.
+        Console.WriteLine("Введите своё имя");
+        string name1 = Console.ReadLine();
+        Console.WriteLine($"Hello, {name1}");
+
+        //Попросите пользователя ввести свой год рождения, а затем используйте переменную для вычисления и вывода его возраста.
+        Console.WriteLine("Введите свой год рождения");
+        int year = Convert.ToInt32(Console.ReadLine());
+        int year_new = 2025;
+        int year_old = year_new - year;
+        Console.WriteLine($"Age: {year_old}");
+
+        //Создайте программу, которая позволяет пользователю вводить и сохранять имена и телефонные номера в переменных, а затем выводить их на экран.
+        Console.WriteLine("Введите своё имя");
+        string you_name = Console.ReadLine();
+        Console.WriteLine("Введите свой номер телефона");
+        int phone = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"{you_name} {phone}");
+
+
+ 
+
 
         
 
