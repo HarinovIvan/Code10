@@ -34,10 +34,50 @@ class Program
         int total1 = number + 5;
         Console.WriteLine($"Total: {total1}");
 
+        //Практика Б
+        //Попросите пользователя ввести свое имя, а затем выведите приветствие с использованием переменной для имени.
+        Console.WriteLine("Введите своё имя");
+        string name1 = Console.ReadLine();
+        Console.WriteLine($"Hello, {name1}");
 
-        
+        //Попросите пользователя ввести свой год рождения, а затем используйте переменную для вычисления и вывода его возраста.
+        Console.WriteLine("Введите свой год рождения");
+        int year = Convert.ToInt32(Console.ReadLine());
+        int year_new = 2025;
+        int year_old = year_new - year;
+        Console.WriteLine($"Age: {year_old}");
 
+        //Создайте программу, которая позволяет пользователю вводить и сохранять имена и телефонные номера в переменных, а затем выводить их на экран.
+        Console.WriteLine("Введите своё имя");
+        string you_name = Console.ReadLine();
+        Console.WriteLine("Введите свой номер телефона");
+        int phone = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($" You name: {you_name} You phone: {phone}");
 
+        //Практика с
+        //Попросите пользователя ввести два числа. Выведите сначала большее, потом меньшее
+        Console.WriteLine("Введите первое число");
+        int num = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите второе число");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        if(num > num2){
+            Console.WriteLine(num);
+            Console.WriteLine(num2);
+        } else if(num < num2){
+            Console.WriteLine(num2);
+            Console.WriteLine(num);
+        }
+        else{
+            Console.WriteLine("Числа равны");
+        }
+
+        //Попросите пользователя ввести число. Выведите разряды числа, а именно: количество сотен, десятков и единиц.
+        Console.WriteLine("Введите число");
+        int numb = Convert.ToInt32(Console.ReadLine());
+        int hund = numb / 100;
+        int des = (numb / 10) %  10;
+        int ed = numb % 10;
+        Console.WriteLine($"Сотни: {hund} десятки: {des} еденицы: {ed}");
 
     }
 }
