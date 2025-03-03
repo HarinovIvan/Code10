@@ -2,3 +2,6 @@
 /.idea
 /.vscode
 /.vs
+# Исполняемые файлы
+bin/
+obj/
