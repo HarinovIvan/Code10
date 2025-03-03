@@ -104,10 +104,15 @@ class Program
         int[] array_one = new int[5];
         Console.WriteLine(array_one);
         //C7
-        int[] array_int_one = { 1, 2, 3};
+        char[] array_int_one = { 'a', 'b', 'c'};
         Console.WriteLine(array_int_one);
         //C8
-        int[] array_hand = {1, 2, 3, 4, 5};
+        int[] array_hand = new int[5];
+        int array_hand[0] = 1;
+        int array_hand[1] = 2;
+        int array_hand[2] = 3;
+        int array_hand[3] = 4;
+        int array_hand[4] = 5;
         Console.WriteLine(array_hand);
 
 
