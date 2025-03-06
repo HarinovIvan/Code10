@@ -117,23 +117,104 @@ class CSProject
     //5
 
     // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
-    // foreach(int num in number){
-    //     if(num < 0){
-    //         Console.WriteLine(num);
-    //     }
+    // int count = 0;
+    // for (int i = 0; i < array.Length; i++){
+    // if (array[i] < 0){
+    //    count++;
+    //    } 
     // }
+    // Console.WriteLine(count);
+    //    
+    //         
+    //     
+    // 
 
     // 6
 
-    
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // int target = 2;
+    // foreach(int num in number){
+    //     if (num == target){
+    //         Console.WriteLine("Число найдено");
+    //         return;
+    //     }
+    // }
+    // Console.WriteLine("Число не найдено");
+
+    //7
+
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // for(int i = 0; i < 9; i++){
+    //     if(number[i] % 2 != 0){
+    //         Console.WriteLine(number[i]);
+    //     }
+    // }
+
+    //8
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // Console.WriteLine(number.Min());
+    // Console.WriteLine(number.Max());
+
+    // 9
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // Array.Sort(number);
+    // foreach(int num in number){
+    //     Console.WriteLine(num);
+    // }
+
+    //10
+
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // for(int i = 0; i < 10; i++){
+    //     if(number[i] < 0){
+    //         number[i] = 0;
+    //     }
+    // }
+    // Console.WriteLine(number);
+
+    //11
 
 
 
+    //12
+    // int[] numbers = {1, 2, 3, 3, 3, 3, 4, 5, 5, 5};
+    // Array.Sort(numbers);
+    // int distinct = numbers.Distinct().Count();
+    // Console.WriteLine(distinct);
 
+    //13
 
-
-
-
+        int[] numbers = { 1, 2, 3, 2, 3, 3, 4, 4, 4, 4 };
+        int[] count = new int[numbers.Length];
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            count[i] = 0;
+        }
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            for (int j = i; j < numbers.Length; j++)
+            {
+                if (numbers[i] == numbers[j])
+                {
+                    count[i]++;
+                }
+            }
+        }
+        int maxCount = 0;
+        for (int i = 0; i < count.Length; i++)
+        {
+            if (count[i] > maxCount)
+            {
+                maxCount = count[i];
+            }
+        }
+        for (int i = 0; i < count.Length; i++)
+        {
+            if (count[i] == maxCount)
+            {
+                Console.WriteLine($"Число {numbers[i]} встречается {maxCount} раз.");
+            }
+        }
 
     }
 }
