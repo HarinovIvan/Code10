@@ -1,0 +1,91 @@
+namespace CSProject;
+using System;
+
+class CSProject
+{
+    static void Main(String[] args)
+    {
+        // цикл foreach, методы и алгоритмы массивов
+        int[] numbers = { 5, 2, 7, 3, 2, 9 };
+
+        // int[] test = { 1, 2 };
+
+        foreach (int num in numbers) {
+            Console.WriteLine(num);
+        }
+        
+        // for (int i = 0; i < array.Length; i++) {
+        //     Console.WriteLine(array[i]);
+        // }
+
+        // i++;
+        // ++i;
+
+        // 1. Сумма элементов массива
+
+        // int[] numbers = { 5, 2, 7, 3, 2, 9 };
+        // int result = 0;
+
+        // foreach (int num in numbers)
+        // {
+        //     result += num;
+        // }
+
+        // System.Console.WriteLine(result);
+
+        // 2. Поиск максимального элемента
+
+        // int[] numbers = { 5, 2, 7, 3, 2, 9 };
+        // int result = int.MinValue;
+
+        // Array.Sort(numbers);
+        // result = numbers[numbers.Length - 1];
+        // System.Console.WriteLine(numbers[numbers.Length - 1]);
+
+        // Array.Reverse(numbers);
+        // result = numbers[0];
+
+        // Math.Max(numbers, numbers.Length);
+
+        // foreach (int num in numbers)
+        // {
+        //     if (result < num) {
+        //         result = num;
+        //     }
+        // }
+
+        // System.Console.WriteLine(result);
+
+        // int result;
+
+        // 3. Обратный порядок массива
+
+        // int[] numbers = { 5, 2, 7, 3, 2, 9 };
+
+        // Array.Reverse(numbers);
+
+        // foreach (int num in numbers)
+        // {
+        //     System.Console.WriteLine(num);
+        // }
+
+        // 4. Четные числа в массиве
+
+        // int[] numbers = { 5, 2, 7, 3, 2, 9, 4, 6 };
+
+        // foreach (int num in numbers)
+        // {
+        //     if (num % 2 == 0) {
+        //         System.Console.WriteLine(num);
+        //     }
+        // }
+
+        // 5. Подсчет отрицательных чисел
+
+        // int[] numbers = { 5, 2, -7, -3, 2, -9, 4, -6 };
+
+        // foreach (int num in numbers) {
+
+        // }
+    }
+}
