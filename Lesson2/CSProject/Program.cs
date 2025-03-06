@@ -53,29 +53,87 @@ class CSProject
 
     //Домашнее задание
     // 1
-    Console.WriteLine("Введите перовое число:");
-    int number_one = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Введите второе число:");
-    int number_two = Convert.ToInt32(Console.ReadLine());
-    int summ = number_one + number_two;
-    Console.WriteLine($"Сумма чисел: {summ}");
+    // Console.WriteLine("Введите перовое число:");
+    // int number_one = Convert.ToInt32(Console.ReadLine());
+    // Console.WriteLine("Введите второе число:");
+    // int number_two = Convert.ToInt32(Console.ReadLine());
+    // int summ = number_one + number_two;
+    // Console.WriteLine($"Сумма чисел: {summ}");
     
-    // 2
-    Random random = new Random();
-    int number_random = random.Next(0, 10);
-    Console.WriteLine("Введите число:");
-    int number_users = 0;
-    while(number_random != number_users){
-        number_users = Convert.ToInt32(Console.ReadLine());
-        if(number_users < number_random){
-            Console.WriteLine("Ваше чисвло меньше загаданного");
-        } else if(number_users > number_random){
-            Console.WriteLine("Ваше число больше загаданного");
-        } 
-        else {
-            Console.WriteLine("Ура вы отгдали число!!!!");
-            break;
-        }
-    }
+    // // 2
+    // Random random = new Random();
+    // int number_random = random.Next(0, 10);
+    // Console.WriteLine("Введите число:");
+    // int number_users = 0;
+    // while(number_random != number_users){
+    //     number_users = Convert.ToInt32(Console.ReadLine());
+    //     if(number_users < number_random){
+    //         Console.WriteLine("Ваше чисвло меньше загаданного");
+    //     } else if(number_users > number_random){
+    //         Console.WriteLine("Ваше число больше загаданного");
+    //     } 
+    //     else {
+    //         Console.WriteLine("Ура вы отгдали число!!!!");
+    //         break;
+    //     }
+    // }
+
+    // //1
+    
+    // int[] numbers = {0, 1, 2, 3, 4, 5};
+    // int result = 0;
+    // foreach(int num in numbers){
+    //     result += num;
+    // }
+    // Console.WriteLine(result);
+
+    // //2
+    // int[] numbers = {0, 1, 2, 3, 4, 5};
+    // int result = int.MinValue;
+    // foreach(num in numbers){
+    //     if(result > num){
+    //         result = num;
+    //     }
+    // }
+    // Console.WriteLine(result);
+
+    // //3
+    
+    // int[] numbers = {0, 1, 2, 3, 4, 5};
+    // Array.Reverse(numbers);
+    // foreach(num in numbers){
+    //     Console.WriteLine(num);
+    // }
+
+    // // 4
+
+    // int[] numbers = {0, 1, 2, 3, 4, 5};
+    // foreach(num in numbers){
+    //     if(num % 2 == 0){
+    //         Console.WriteLine(num);
+    //     }
+    // }
+
+    //5
+
+    // int[] number = {0, 1, 2, 3, 4, 5 -1, -5, 54, -23};
+    // foreach(int num in number){
+    //     if(num < 0){
+    //         Console.WriteLine(num);
+    //     }
+    // }
+
+    // 6
+
+    
+
+
+
+
+
+
+
+
+
     }
 }
