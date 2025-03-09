@@ -184,37 +184,64 @@ class CSProject
 
     //13
 
-        int[] numbers = { 1, 2, 3, 2, 3, 3, 4, 4, 4, 4 };
-        int[] count = new int[numbers.Length];
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            count[i] = 0;
-        }
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            for (int j = i; j < numbers.Length; j++)
-            {
-                if (numbers[i] == numbers[j])
-                {
-                    count[i]++;
-                }
-            }
-        }
-        int maxCount = 0;
-        for (int i = 0; i < count.Length; i++)
-        {
-            if (count[i] > maxCount)
-            {
-                maxCount = count[i];
-            }
-        }
-        for (int i = 0; i < count.Length; i++)
-        {
-            if (count[i] == maxCount)
-            {
-                Console.WriteLine($"Число {numbers[i]} встречается {maxCount} раз.");
-            }
+        // int[] numbers = { 1, 2, 3, 2, 3, 3, 4, 4, 4, 4 };
+        // int[] count = new int[numbers.Length];
+        // for (int i = 0; i < numbers.Length; i++)
+        // {
+        //     count[i] = 0;
+        // }
+        // for (int i = 0; i < numbers.Length; i++)
+        // {
+        //     for (int j = i; j < numbers.Length; j++)
+        //     {
+        //         if (numbers[i] == numbers[j])
+        //         {
+        //             count[i]++;
+        //         }
+        //     }
+        // }
+        // int maxCount = 0;
+        // for (int i = 0; i < count.Length; i++)
+        // {
+        //     if (count[i] > maxCount)
+        //     {
+        //         maxCount = count[i];
+        //     }
+        // }
+        // for (int i = 0; i < count.Length; i++)
+        // {
+        //     if (count[i] == maxCount)
+        //     {
+        //         Console.WriteLine($"Число {numbers[i]} встречается {maxCount} раз.");
+        //     }
+        // }
+
+
+        //Домашнее задание
+
+        //1Напишите программу, которая объединяет два массива целых чисел в один. Элементы второго массива должны следовать за элементами первого массива.
+        
+        int[] array_one = {1, 2, 3, 4, 5};
+        int[] array_two = {6, 7, 8, 9, 10};
+        int[] array_all = array_one.Concat(array_two).ToArray();
+        foreach(int num in array_all){
+            Console.WriteLine(num);
         }
 
+        //2Создайте программу, которая осуществляет циклическую ротацию массива на заданное количество позиций вправо. Например, ротация массива [1, 2, 3, 4, 5] на две позиции даст [4, 5, 1, 2, 3].
+
+        int[] originalArray = {1, 2, 3, 4, 5};
+        int k = 2;
+        if(k > originalArray.Length){
+            k = k % originalArray.Length;
+        }
+        int[] newArray = new int[originalArray.Length];
+        for (int i = 0; i < originalArray.Length; i++){
+            newArray[(i + k) % originalArray.Length] = originalArray[i];
+        }
+
+        foreach(int num in newArray){
+            Console.WriteLine(num);
+        }
     }
 }
