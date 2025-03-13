@@ -38,8 +38,8 @@ class Person
 
     public Person(string name, int age)
     {
-        peep.name = name;
-        peep.age = age;
+        this.name = name;
+        this.age = age;
     }
 
     public void Introduce()
@@ -53,7 +53,7 @@ class Person
     {
         if (age >= 0)
         {
-            peep.age = age;
+            this.age = age;
         }
         else
         {
@@ -68,6 +68,6 @@ class Employee : Person
 
     public Employee(string name, int age, string pos) : base(name, age)
     {
-        peep.position = position;
+        this.position = position;
     }
 }
