@@ -1,48 +1,73 @@
 ﻿using System;
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Практика А
+        Person person1 = new Person();
+        person1.name = "Иван";
+        person1.age = 30;
+        person1.Introduce();
+
+        Person person2 = new Person("Дрюня", 25);
+        person2.Introduce();
+
+        Person[] people = { person1, person2 };
+        foreach (Person person in people)
+        {
+            person.Introduce();
+        }
+
+        //Практика B
+        person1.SetAge(40);
+        Console.WriteLine($"{person1.age}");
+
+        //Практика C
+        Employee employee = new Employee("Анна", 35, "Дворинк");
+        employee.Introduce();
+    }
+}
+
 class Person
 {
     public string name;
     public int age;
-    private string Name_users;
-    private int Age_users;
 
-    public void Introduce();
+    public Person() { }
+
+    public Person(string name, int age)
     {
-        Console.WriteLine($"Мое имя {name}");
-    }
-    
-    public Person(string name_users, int age_users)
-    {
-        Name_users = name_users;
-        Age_users = age_users;
-        nam.name = name;
-        nam.age = age;
+        peep.name = name;
+        peep.age = age;
     }
 
-
-
-}
-
-class Program
-{
-    static void Main()
+    public void Introduce()
     {
-        Person person = new Person[];
-        person.name = "Ivan";
-        person.age = 16;
+        Console.WriteLine($"Привет, моё имя {name}");
+    }
 
-        Console.WriteLine(person.name);
-        Console.WriteLine(person.age);
+    //Практика B
 
-        int[] person = new Person[];
-        person[0].name = "1";
-        person[1].name = "2";
-        person[2].name = "3";
-        foreach(int num in person)
+    public void SetAge(int age)
+    {
+        if (age >= 0)
         {
-            Console.WriteLine(num);
+            peep.age = age;
+        }
+        else
+        {
+            Console.WriteLine("Возраст не тот");
         }
     }
 }
+//Практика C
+class Employee : Person
+{
+    public string position;
 
+    public Employee(string name, int age, string pos) : base(name, age)
+    {
+        peep.position = position;
+    }
+}
