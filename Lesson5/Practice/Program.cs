@@ -1,6 +1,6 @@
 ﻿using System;
 
-<<<<<<< HEAD
+
 // class Program
 // {
 //     static void Main(string[] args)
@@ -153,7 +153,6 @@ class Homework
     }
 
     
-=======
 class Person
 {
     public string name;
@@ -176,5 +175,4 @@ class Program
         System.Console.WriteLine(person.name);
         System.Console.WriteLine(person.age);
     }
->>>>>>> upstream/main
 }

@@ -40,34 +40,86 @@ public class Employee : Person
         Position = position;
     }
 }
+//практика B
+// public class PersonFileService
+// {
+//     public Person[] ReadPeopleFromFile()
+//     {
+//         const string fileName = "persons.txt";
+//         string[] persons = File.ReadAllLines(fileName);
+//         var people = new List<Person>();
+//         for(int i = 0; i < persons.Length; i += 2)
+//         {
+//             people.Add(new Person(persons[i], Convert.ToInt32(persons[i+1])));
+//         }
+//         Person[] array = people.ToArray();
+//         return array;
+//     }
 
-public class PersonFileService
-{
-    
-}
+//     public void WritePeopleToFile(people Person[])
+//     {
+
+//     }
+// }
 
 public class Program
 {
+    //Практика A
+    // static void ReadandWrite()
+    // {
+    //     const string fileName = "Test.txt";
+    //     File.WriteAllText(fileName, "test");
+    //     string text = File.ReadAllText(fileName);
+    // }
+
     public static void Main()
     {
+        // ReadandWrite();
+
+        //b
+        // PersonFileService qwe = new PersonFileService();
+        // Person[] array = qwe.ReadPeopleFromFile();
+        // foreach(Person person in array)
+        // {
+        //     person.Introduce();
+        // }
+
         // Список людей для чтения и записи в файл
-        var people = new List<Person>
-        {
-            new Person("Alice", 28),
-            new Person("Bob", 35),
-            new Employee("Charlie", 42, "Manager")
-        };
+        // var people = new List<Person>
+        // {
+        //     new Person("Alice", 28),
+        //     new Person("Bob", 35),
+        //     new Employee("Charlie", 42, "Manager")
+        // };
 
-        // Запись Person в файл
-        //PersonFileService.WritePeopleToFile(people);
+        // // Запись Person в файл
+        // //PersonFileService.WritePeopleToFile(people);
 
-        // Чтение Person из файла
-        //var peopleFromFile = PersonFileService.ReadPeopleFromFile();
+        // // Чтение Person из файла
+        // //var peopleFromFile = PersonFileService.ReadPeopleFromFile();
         
-        foreach (var person in peopleFromFile)
+        // foreach (var person in peopleFromFile)
+        // {
+        //     person.Introduce();
+        // }
+
+        //практика c
+        static void ReadmeMD(string[] path)
         {
-            person.Introduce();
+            string path = "readme.MD";
+            string con1 = "# Заголовок превого уровня";
+            string con2 = "## Заголовок второго уровня";
+            string con3 = "Текст в формате Markdown.";
+            string con4 = "- Пункт списка";
+            string con5  = "* пример маркированного текста";
+            string con6  = "### Заголовок третьего уровня";
+            string con7  = "**Жирный текст** и *курсив*";
+            string con8  = "![Альтернативный текст](путь_к_изображению)";
+            string con9  = "[Текст ссылки](https://....)";
+            File.WriteAllText(path, con1, con2, con3, con4, con5, con6, con7, con8, con9);
+            path.Save("Readme.md", SaveFormat.Markdown);
         }
+
     }
 }
 
