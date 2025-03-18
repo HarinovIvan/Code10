@@ -59,11 +59,9 @@ public class Employee : Person
 //     public void WritePeopleToFile(people Person[])
 //     {
             string path = "persons.txt";  
-            string name = "ivan";
-            int Age = 20;      
             for (int i = 0; i , Person.Length; i++)
             {
-                File.AppendAllText(path, $"{Person.name}\r\n{Person.Age}\r\n"
+                File.AppendAllText(path, $"{Person.name}\r\n{Person.Age}\r\n");
             }
 //     }
 // }
