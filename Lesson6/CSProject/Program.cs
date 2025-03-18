@@ -58,7 +58,13 @@ public class Employee : Person
 
 //     public void WritePeopleToFile(people Person[])
 //     {
-
+            string path = "persons.txt";  
+            string name = "ivan";
+            int Age = 20;      
+            for (int i = 0; i , Person.Length; i++)
+            {
+                File.AppendAllText(path, $"{Person.name}\r\n{Person.Age}\r\n"
+            }
 //     }
 // }
 
@@ -84,6 +90,11 @@ public class Program
         //     person.Introduce();
         // }
 
+        PersonFileService qwe1 = new PersonFileService();
+        Person[] array1 = qwe1.WritePeopleToFile();
+
+        
+
         // Список людей для чтения и записи в файл
         // var people = new List<Person>
         // {
@@ -102,6 +113,8 @@ public class Program
         // {
         //     person.Introduce();
         // }
+
+
 
         //практика c
         static void ReadmeMD(string[] path)
