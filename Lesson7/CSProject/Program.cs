@@ -129,30 +129,54 @@ class SimpleDB
     public void SaveDB()
     {
         Console.WriteLine("Funcional ne realizovan...");
-        //  1 B;
+        fileService.SaveToFile();
+        Console.WriteLine("Baza dannyx sohranena.");
     }
 
     public void LoadDB()
     {
         Console.WriteLine("Funcional ne realizovan...");
-        //  practice B;
+        fileService.LoadFromFile()    
+        Console.WriteLine("Baza dannyx sohranena.");
     }
     public void AddStudent(string name)
     {
         Console.WriteLine("Funcional ne realizovan...");
-         //  practice A;
+        Student temp = new Student(name);
+        students[name] = temp;
+        Console.WriteLine($"Student {name} dobavlen")
     }
 
     public void RemoveStudent(string name)
     {
         Console.WriteLine("Funcional ne realizovan...");
-         //  practice A;
+        if(students.Remove(name))
+        {
+            Console.WriteLine($"Student {name} dobavlen");
+        } else {
+            Console.WriteLine($"Student {name} ne naiden");
+        }
     }
 
     public void ShowStudentInfo(string name)
     {
         Console.WriteLine("Funcional ne realizovan...");
-         //  practice A;
+        if(students.ContainsKey(name))
+        {
+            Student temp = students[name];
+            Console.WriteLine($" Imya: {temp.Name}");
+            Console.WriteLine($"Ocenki");
+            foreach(var i in temp.Grades)
+            {
+                Console.WriteLine($"{i.Key} : {i.Value}");
+            }
+        Console.WriteLine($"Posechaemost");
+        foreach(var i in temp.Attendance){
+            Console.WriteLine($"{i.Key} : {(i.Value ? "prisutstvoval" : "otsutstvoval")}");
+        }
+        } else {
+            Console.WriteLine($"Student {name} ne naiden");
+        }
     }
 
     public Student GetStudent(string name)
