@@ -65,7 +65,7 @@ class Item
         Description = description;
     }
 
-    public virtual void Use(Hero Hero)
+    public virtual void Use(Hero hero)
     {
         Console.WriteLine($"Using {Name}: {Description}");
     }
