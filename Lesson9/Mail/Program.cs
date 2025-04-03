@@ -67,11 +67,17 @@ public class Mail
         }
         return res;
     }
-    
+
     public List<int> GetNewLetterIds_Linq()
     {
         // TODO: Задание B1. напишите здесь linq запрос
-        throw new NotImplementedException(); // заглушка, надо убрать
+        var res = Letters.Where(letter => letter.IsNew == true).Select(letter => letter.Id).ToList();
+        
+        // var res = from letter in Letters
+        //           where letter.IsNew == true
+        //           select letter.Id;
+
+        return res;
     }
     
     public void SortByRecived_Classic()
@@ -92,8 +98,7 @@ public class Mail
     
     public void SortByRecived_Linq()
     {
-        // TODO: Задание B2. напишите здесь linq запрос
-        throw new NotImplementedException(); // заглушка, надо убрать
+        Letters = Letters.OrderBy(letter => letter.Received).ToList();
     }
 }
 
@@ -123,7 +128,26 @@ public class Program
         Console.WriteLine($"Количество новых писем (Linq): {countNewLetters_linq.Count}");
         
         // Сортировка писем по дате получения
-        // TODO: Задание B2. для mail вызовите метод SortByRecived_Linq и выведите полученные письма
+        Console.WriteLine("\nПисьма до сортировки:");
+        foreach (var letter in mail.Letters)
+        {
+            Console.WriteLine($"ID: {letter.Id}, Received: {letter.Received}");
+        }
+
+        mail.SortByRecived_Classic();
+        Console.WriteLine("\nПосле SortByRecived_Classic:");
+        foreach (var letter in mail.Letters.Take(5))
+        {
+            Console.WriteLine($"ID: {letter.Id}, Received: {letter.Received}");
+        }
+
+        mail.CreateRandomLetters(10); 
+        mail.SortByRecived_Linq();
+        Console.WriteLine("\nПосле SortByRecived_Linq:");
+        foreach (var letter in mail.Letters.Take(5))
+        {
+            Console.WriteLine($"ID: {letter.Id}, Received: {letter.Received}");
+        }
         
 
 
@@ -133,11 +157,24 @@ public class Program
             email.CreateRandomLetters(10);
         }
         
-        // TODO: Практика C1. Найти старые письма (!IsNew) с почтовым ящиком user1@mail.com 
+        var oldLettersUser1 = Mails
+            .Where(m => m.Email == "user1@mail.com")
+            .SelectMany(m => m.Letters)
+            .Where(l => !l.IsNew)
+            .ToList();
+
+        Console.WriteLine("Старые письма для user1@mail.com:");
+        foreach (var letter in oldLettersUser1)
+        {
+            Console.WriteLine($"ID: {letter.Id}, Title: {letter.Title}");
+        }
         
 
-        // TODO: Практика C2. Найти время самого нового письма (Received) для почтового ящика user4@mail.com
-        
+        var newestLetterTime = Mails
+        .Where(m => m.Email == "user4@mail.com")
+        .SelectMany(m => m.Letters)
+        .Max(l => l.Received);
+            
 
     }
 }
