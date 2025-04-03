@@ -25,4 +25,17 @@ class Program
         System.Console.WriteLine(x * x);
 
     }
+
+
+    static int ErrorNumber()
+    {
+        try
+        {
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Произошла ошибка: Введите корректное число.");
+        }
+    }
 }
