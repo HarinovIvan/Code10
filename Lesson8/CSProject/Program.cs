@@ -4,7 +4,7 @@ using System.IO;
 
 using System;
 
-abstract class Animal
+class Animal
 {
     public string Name { get; set; } // Поле (свойство)
     
@@ -18,7 +18,10 @@ abstract class Animal
         Console.WriteLine($"{Name} спит... 😴");
     }
 
-    public abstract void MakeSound(); // Абстрактный метод (без реализации)
+    public virtual void MakeSound()
+    {
+        System.Console.WriteLine($"{Name} издает звук!");
+    } 
 }
 
 class Dog : Animal
@@ -28,6 +31,16 @@ class Dog : Animal
     public override void MakeSound() // Реализация метода
     {
         Console.WriteLine($"{Name} лает: Гав-гав! 🐶");
+    }
+
+    private void dogEat()
+    {
+        System.Console.WriteLine($"{Name} кушает!");
+    }
+    
+    public void eating()
+    {
+        dogEat();
     }
 }
 
@@ -45,13 +58,17 @@ class Program
 {
     static void Main()
     {
-        Animal myDog = new Dog("Шарик");
-        Animal myCat = new Cat("Мурка");
+        // Animal myAnimal = new Animal("");
+        Dog myDog = new Dog("Шарик");
 
-        myDog.MakeSound(); // Шарик лает: Гав-гав! 🐶
-        myCat.MakeSound(); // Мурка мяукает: Мяу-мяу! 🐱
+        myDog.dogEat();
 
-        myDog.Sleep(); // Шарик спит... 😴
-        myCat.Sleep(); // Мурка спит... 😴
+        // Animal myCat = new Cat("Мурка");
+
+        // myDog.MakeSound(); // Шарик лает: Гав-гав! 🐶
+        // myCat.MakeSound(); // Мурка мяукает: Мяу-мяу! 🐱
+
+        // myDog.Sleep(); // Шарик спит... 😴
+        // myCat.Sleep(); // Мурка спит... 😴
     }
 }

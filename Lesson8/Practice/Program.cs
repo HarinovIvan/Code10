@@ -1,21 +1,50 @@
 ﻿using System;
+<<<<<<< HEAD
+=======
+using System.Collections.Generic;
+using System.Reflection.Metadata;
+
+// Идея игры:
+// Игрок управляет героем, который может сражаться с монстрами и собирать сокровища.
+// В игре есть несколько типов монстров и предметов. Герой может атаковать и получать урон.
+
+
+// Creature - абстрактный базовый класс, представляющий общее существо с именем и здоровьем. Включает абстрактный метод Attack и виртуальный метод TakeDamage.
+// Hero - класс, представляющий героя, наследует Creature. Реализует метод Attack, который атакует другое существо.
+// Monster - класс, представляющий монстра, наследует Creature. Также реализует метод Attack.
+// Item - базовый класс для предметов, содержит имя и описание, а также виртуальный метод Use.
+// HealingPotion - класс, представляющий зелье лечения, наследует Item. Переопределяет метод Use, чтобы увеличивать здоровье героя.
+// Game - класс, управляющий игрой. Содержит героя, список монстров и инвентарь предметов. Метод Play запускает игру, где герой сражается с монстрами и использует предметы.
+// Program - основной класс, запускающий игру.
+>>>>>>> upstream/main
 
 abstract class Creature
 {
     public string Name { get; set; }
     public int Health { get; set; }
 
+<<<<<<< HEAD
     public Creature (string name, int health)
+=======
+    public Creature(string name, int health)
+>>>>>>> upstream/main
     {
         Name = name;
         Health = health;
     }
 
     public abstract void Attack(Creature target);
+<<<<<<< HEAD
     public virtual void TakeDamage(int damage)
     {
         Health -= damage;
         if(Health < 0)
+=======
+    public virtual void TakeDamage(int damage) 
+    {
+        Health -= damage;
+        if (Health < 0)
+>>>>>>> upstream/main
         {
             Health = 0;
         }
@@ -25,8 +54,12 @@ abstract class Creature
 class Hero : Creature
 {
     public int AttackPower { get; set; }
+<<<<<<< HEAD
 
     public Hero(string name, int health, int AttackPower) : base(name, health)
+=======
+    public Hero(string name, int health, int attackPower) : base(name, health)
+>>>>>>> upstream/main
     {
         AttackPower = attackPower;
     }
@@ -34,6 +67,7 @@ class Hero : Creature
     public override void Attack(Creature target)
     {
         target.TakeDamage(AttackPower);
+<<<<<<< HEAD
         Console.WriteLine($"{Name} attacks {target.Name} for {AttackPower} damage");
     }
 
@@ -42,6 +76,16 @@ class Hero : Creature
 class Monster : Creature 
 {
     public int AttackPower{get; set;}
+=======
+        System.Console.WriteLine($"{Name} attacks {target.Name} for {AttackPower} damage");
+    }
+}
+
+class Monster : Creature
+{
+    public int AttackPower { get; set; }
+
+>>>>>>> upstream/main
     public Monster(string name, int health, int attackPower) : base(name, health)
     {
         AttackPower = attackPower;
@@ -50,14 +94,23 @@ class Monster : Creature
     public override void Attack(Creature target)
     {
         target.TakeDamage(AttackPower);
+<<<<<<< HEAD
         System.Console.WriteLine($"{name} attacks {target.Name} for {AttackPower} damage");
+=======
+        System.Console.WriteLine($"{Name} attacks {target.Name} for {AttackPower} damage");
+>>>>>>> upstream/main
     }
 }
 
 class Item
 {
+<<<<<<< HEAD
     public string Name {get; set;}
     public string Description {get; set;}
+=======
+    public string Name { get; set; }
+    public string Description { get; set; }
+>>>>>>> upstream/main
 
     public Item(string name, string description)
     {
@@ -65,6 +118,7 @@ class Item
         Description = description;
     }
 
+<<<<<<< HEAD
     public virtual void Use(Hero hero)
     {
         Console.WriteLine($"Using {Name}: {Description}");
@@ -163,3 +217,20 @@ class Program
 
 
 
+=======
+    public virtual void Use(Hero player)
+    {
+        // Практика B 3.
+    }
+}
+
+
+
+public class Program
+{
+    public static void Main()
+    {
+
+    }
+}
+>>>>>>> upstream/main
