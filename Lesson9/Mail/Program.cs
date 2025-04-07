@@ -77,7 +77,12 @@ public class Mail
         //           where letter.IsNew == true
         //           select letter.Id;
 
+<<<<<<< HEAD
         return res;
+=======
+        return res;//.ToList();
+        // throw new NotImplementedException(); // заглушка, надо убрать
+>>>>>>> upstream/main
     }
     
     public void SortByRecived_Classic()
@@ -152,10 +157,10 @@ public class Program
 
 
 
-        foreach (var email in Mails)
-        {
-            email.CreateRandomLetters(10);
-        }
+        // foreach (var email in Mails)
+        // {
+        //     email.CreateRandomLetters(10);
+        // }
         
         var oldLettersUser1 = Mails
             .Where(m => m.Email == "user1@mail.com")
