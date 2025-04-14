@@ -42,6 +42,22 @@ class Program
         sensor.UpdateTemperature(14);
         sensor.UpdateTemperature(43);
     }
+
+    //C
+    Stock stock = new Stock();
+
+        stock.PriceChanged += (sender, e) =>
+        {
+            Console.WriteLine("Цена изменилась!");
+        };
+
+        stock.PriceChanged += (sender, e) =>
+        {
+            Console.WriteLine("Новая цена: " + ((Stock)sender).Price);
+        };
+
+        stock.ChangePrice(123.5);
+        stock.ChangePrice(89.0);
 }
 
 
