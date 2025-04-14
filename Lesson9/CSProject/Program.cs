@@ -1,10 +1,5 @@
 ﻿using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
-<<<<<<< HEAD
-// A
-=======
-
->>>>>>> upstream/main
 class Person
 {
     public string Name { get; set; }
@@ -15,8 +10,6 @@ class Program
 {
     static void Main()
     {
-<<<<<<< HEAD
-=======
         // System.Console.WriteLine("Введите любое число");
         // int num = 0;
         // try
@@ -75,7 +68,6 @@ class Program
         //         System.Console.WriteLine($" - {person.Name}");
         //     }
         // }
->>>>>>> upstream/main
         int x = 10;
         int y = 0;
         try
@@ -90,7 +82,6 @@ class Program
         System.Console.WriteLine(x * x);
 
     }
-<<<<<<< HEAD
 
 
     static int ErrorNumber()
@@ -104,6 +95,4 @@ class Program
             Console.WriteLine("Произошла ошибка: Введите корректное число.");
         }
     }
-=======
->>>>>>> upstream/main
 }

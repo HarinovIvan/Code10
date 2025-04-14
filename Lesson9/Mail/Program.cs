@@ -77,12 +77,9 @@ public class Mail
         //           where letter.IsNew == true
         //           select letter.Id;
 
-<<<<<<< HEAD
         return res;
-=======
         return res;//.ToList();
         // throw new NotImplementedException(); // заглушка, надо убрать
->>>>>>> upstream/main
     }
     
     public void SortByRecived_Classic()
