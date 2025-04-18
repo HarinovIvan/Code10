@@ -3,8 +3,6 @@ class Program
  
  public delegate int StringComparison(string str1, string str2);
  
- class Program
- {
      public static int CompareByLength(string str1, string str2)
      {
          return str1.CompareTo(str2);
@@ -125,7 +123,7 @@ class Program
         {
             Console.WriteLine($"Старый баланс: {e.OldBalance}, новый баланс: {e.NewBalance}");
         }
- }
+ 
  
  public delegate void Notify();
  
