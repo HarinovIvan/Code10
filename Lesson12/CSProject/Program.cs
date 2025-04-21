@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
+﻿﻿using System;
 class Program
  
  public delegate int StringComparison(string str1, string str2);
@@ -238,7 +237,6 @@ public class BankAccount
             NewBalance = newBalance;
         }
     }
-=======
 ﻿using System.ComponentModel.DataAnnotations;
 
 public delegate int StringComparison(string str1, string str2);
@@ -374,4 +372,3 @@ public class AnimalBox<T> where T : Animal
 {
     public T value { get; set; }
 }
->>>>>>> upstream/main
