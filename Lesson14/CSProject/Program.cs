@@ -12,15 +12,27 @@ app.Run();
 [Route("api/[controller]")]
 public class TestController : ControllerBase
 {
+    public List<string> users = new List<string>();
+
     [HttpGet]
     public ActionResult Get()
     {
         return Ok("Hello World!"); 
     }
+
     [HttpPost]
     public ActionResult Post([FromBody] string body)
     {
-        return NotFound($"Hello {body}!");
+        if (body != null)
+        {
+            users.Append(body);
+        }
+        else
+        {
+            return NotFound("Ошибка");
+        }
+
+        return Ok($"Пользователь {body} успешно добавлен");
     }
 }
 

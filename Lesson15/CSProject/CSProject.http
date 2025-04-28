@@ -1,0 +1,6 @@
+@CSProject_HostAddress = http://localhost:5030
+
+GET {{CSProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
