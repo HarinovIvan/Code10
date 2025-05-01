@@ -1,62 +1,84 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers();
-var app = builder.Build();
-app.MapControllers();
-app.Run();
 
-[ApiController]
-[Route("api/[controller]")]
-public class TestController : ControllerBase
+//a
+namespace WeatherApi.Controllers
 {
-    public List<string> users = new List<string>();
-
-    [HttpGet]
-    public ActionResult Get()
+    [ApiController]
+    [Route("[controller]")]
+    public class WeatherController : ControllerBase
     {
-        return Ok("Hello World!"); 
-    }
-
-    [HttpPost]
-    public ActionResult Post([FromBody] string body)
-    {
-        if (body != null)
+        [HttpGet]
+        public IEnumerable<double> GetTemperatures()
         {
-            users.Append(body);
+            return new double[] { 22.5, 23.1, 24.0, 22.8 };
         }
-        else
-        {
-            return NotFound("Ошибка");
-        }
-
-        return Ok($"Пользователь {body} успешно добавлен");
     }
 }
-
-[ApiController]
-[Route("api/[controller]")]
-public class Controller : ControllerBase
+//b
+namespace UserApi.Controllers
 {
-    [HttpGet]
-    public ActionResult Get()
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
     {
-        return Ok("User 1"); 
-    }
-    [HttpPost]
-    public ActionResult Post([FromBody] string body)
-    {
-        try
+        private readonly UserContext _context;
+
+        public UserController(UserContext context)
         {
-            // методы для сохранения данных...
-            throw new Exception("Ошибка");
+            _context = context;
         }
-        catch (Exception ex)
+
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            return Problem(ex.Message);
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
-        return Ok($"Data is saved");
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            User user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return user;
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUser(int id, User user)
+        {
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            User user = await _context.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }

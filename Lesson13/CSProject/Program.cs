@@ -11,7 +11,6 @@ class Program
         using HttpClient client = new HttpClient();
         string url = "https://jsonplaceholder.org/posts/1";
 
-<<<<<<< HEAD
         System.Console.WriteLine(response);
 
         // A
@@ -100,7 +99,6 @@ class Program
             Console.WriteLine(responseBody);
         }
 }
-=======
         var data = new
         {
             id = 100,
@@ -154,4 +152,3 @@ class Program
         // System.Console.WriteLine(response);
     }
 }
->>>>>>> upstream/main
